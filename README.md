@@ -1,162 +1,167 @@
-E-commerce Delivery & Logistics Performance Analysis
-An end-to-end data analytics project exploring e-commerce delivery
-performance, late deliveries, delivery duration, cancellations, product
-categories, seller patterns, and customer review scores using Python in
-Google Colab and Power BI.
-Project Overview
-Delivery reliability affects customer experience and logistics
-operations. This project analyzes historical e-commerce order data to
-measure delivery performance, identify patterns associated with delays,
-and present the findings in a Power BI dashboard and final report.
-Project Objectives
+# E-Commerce Delivery & Logistics Performance Analysis
+
+**An End-to-End Data Analytics Project | Python | Power BI**
+
+[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
+[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)](https://powerbi.microsoft.com/)
+[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)](https://pandas.pydata.org/)
+[![Google Colab](https://img.shields.io/badge/Google%20Colab-Notebook-orange?logo=googlecolab)](https://colab.research.google.com/)
+
+## Project Overview
+
+This project focuses on analysing e-commerce delivery and logistics performance using the Brazilian Olist e-commerce dataset.
+
+The analysis explores delivery timelines, late deliveries, cancellations, product categories, seller performance and customer review scores to identify operational patterns and generate meaningful business insights.
+
+The project uses Python for data preparation and exploratory analysis and Power BI for interactive data visualization.
+
+## Project Objectives
+
 - Audit and prepare the dataset for analysis.
-- Explore the dataset and validate key fields.
-- Define and calculate delivery performance KPIs.
-- Analyze late-delivery patterns over time and across product
-  categories and sellers.
-- Compare customer review scores for on-time/early and late
-  deliveries.
-- Build a Power BI dashboard and summarize practical follow-up
-  actions.
-Tools Used
-- Python --- data preparation and analysis
-- Pandas / NumPy --- data manipulation and calculations
-- Matplotlib --- charts and visual exploration
-- Google Colab --- notebook-based analysis
-- Power BI Desktop --- KPI cards and dashboard visualizations
-- GitHub --- version control and project documentation
-Dataset
-The project uses the public Brazilian e-commerce dataset commonly known
-as the Olist dataset. The analysis uses order and related data needed to
-study purchase dates, delivery dates, estimated delivery dates, order
-status, product categories, sellers, and customer review scores.
+- Perform exploratory data analysis (EDA).
+- Calculate important delivery performance KPIs.
+- Identify patterns in delayed deliveries.
+- Analyse delivery performance across product categories and sellers.
+- Compare customer review scores for late and on-time deliveries.
+- Develop a Power BI dashboard.
+- Provide actionable business recommendations.
 
-The analysis does not have a usable carrier identifier or direct
-delivery-distance measure, so carrier-level and distance-based
-comparisons are not included.
-Project Workflow
-Week 1 --- Data Quality Audit and Exploratory Data Analysis
-- Loaded and inspected the source data.
-- Checked dataset shape, data types, duplicate order IDs, missing
-  values, and date fields.
-- Explored the main order and delivery fields.
-- Documented data quality considerations before KPI calculations.
-Week 2 --- KPI Engineering and Delivery Performance
-- Calculated delivered-order counts and delivery duration.
-- Compared actual delivery dates with estimated delivery dates.
-- Measured late-delivery and cancellation rates.
-- Reviewed monthly late-delivery patterns.
-- Compared late-delivery rates across product categories and sellers,
-  with attention to sample sizes.
-- Compared customer review scores for late versus on-time/early
-  deliveries.
-Week 3 --- Deeper Analysis and Operational Recommendations
-- Examined where late deliveries were more concentrated.
-- Compared purchase-to-carrier handover time with carrier-to-customer
-  transit time.
-- Interpreted the relationship between late delivery and review
-  scores.
-- Prepared practical follow-up actions and noted the limits of the
-  available data.
-Week 4 --- Power BI Dashboard and Final Documentation
-- Created a Power BI dashboard with KPI cards and charts.
-- Prepared a revised project report with findings, limitations, and
-  recommendations.
-- Documented the workflow and final results for GitHub.
-Key Findings
-The following figures are from the current analysis summary and should
-be interpreted in the context of the available dataset and filters.
-  Metric                                                           Result
-  Total orders in the orders                                       99,441
-  table                          
+## Tools & Technologies
 
-  Delivered orders eligible for                                    96,470
-  actual-versus-estimated
-  delivery analysis              
+| Tool | Purpose |
+|---|---|
+| Python | Data analysis and preprocessing |
+| Pandas | Data manipulation |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Google Colab | Notebook execution |
+| Power BI | Interactive dashboard |
+| GitHub | Project documentation and version control |
 
-  Late deliveries                                                   6,534
+## Dataset
 
-  Late-delivery rate                                                6.77%
+The project uses the publicly available Brazilian E-Commerce Public Dataset by Olist.
 
-  On-time or early deliveries                                      93.23%
+The dataset contains e-commerce order information, including purchase timestamps, delivery timestamps, estimated delivery dates, order status, product categories, sellers and customer reviews.
 
-  Average purchase-to-customer                                 12.56 days
-  delivery duration              
+**Data limitation:** The available data does not provide a usable carrier identifier or direct delivery-distance measure for this analysis.
 
-  Median purchase-to-customer                                  10.22 days
-  delivery duration              
-  Cancellation rate                                                 0.63%
-Additional observations:
-- Purchase-to-carrier handover averaged approximately 3.23 days
-  among valid non-negative intervals.
-- Carrier handover-to-customer transit averaged approximately 9.33
-  days among valid non-negative intervals.
-- March 2018 had a late-delivery rate of 18.96% in the analyzed
-  monthly summary. February 2018 and November 2017 were also
-  higher-delay months in that summary.
-- Late deliveries were associated with lower customer review scores:
-  approximately 2.27 for late orders versus 4.29 for
-  on-time/early orders in the matched review subset. This is an
-  association, not proof that delay alone caused the lower scores.
-- Some seller/category rates are based on relatively small numbers of
-  eligible orders. Review the underlying counts before treating a high
-  rate as a stable performance ranking.
-Power BI Dashboard
-The dashboard includes:
-- Total Delivered Orders: approximately 96.47K
-- Late Delivery Rate: 6.77%
-- Average Delivery Duration: 12.56 days
-- Monthly late-delivery rate trend
-- Late-delivery rate by product category
-- Late-delivery rate by seller
-The dashboard is intended to support exploration of delivery
-performance. Always check the eligible order count alongside rates,
-especially for sellers or categories with smaller samples.
-Recommendations
-1. Investigate operational conditions around months with unusually high
-   late-delivery rates.
-2. Review the order processing and carrier handover stage, since
-   processing time is a meaningful part of the overall delivery
-   timeline.
-3. Monitor seller and category results together with eligible order
-   counts to avoid overreacting to small samples.
-4. Track customer review scores alongside delivery performance as a
-   customer-experience signal.
-5. In future analysis, include carrier, region, and distance data if
-   reliable fields become available.
-Limitations
-- The dataset does not provide a usable carrier identifier or direct
-  delivery-distance measure for this analysis.
-- Seller and product-category comparisons can be affected by different
-  order volumes and product mixes.
-- The review-score comparison is observational and does not establish
-  causation.
-- KPI values depend on the specific eligible records and filters used
-  for each calculation. The final notebook and dashboard should be
-  treated as the detailed calculation sources.
-Repository Contents
-The repository currently includes the Week 1 EDA notebook and Week 1
-project archive. Add or keep the following deliverables in the
-repository as applicable:
-- 01_data_quality_eda.ipynb --- original Week 1 notebook, if
-  retained separately
-- Combined Weeks 1--3 .ipynb notebook --- the full analysis workflow
-- week1_project_files.zip --- Week 1 supporting files
-- Ecommerce_Delivery_Logistics_Performance_Analysis.pbix --- Power
-  BI dashboard
-- Ecommerce_Delivery_Logistics_Performance_Analysis_Report_Revised.docx
-  --- final report
-- README.md --- project documentation
-File names in the repository should match the names you actually
-upload. If the combined notebook has a different filename, keep its
-real filename in the repository and update this list accordingly.
+## Project Workflow
 
-How to Review the Project
-1. Open the combined analysis notebook in GitHub or download it and run
-   it in Google Colab.
-2. Open the .pbix file using Power BI Desktop to explore the
-   dashboard.
-3. Read the revised report for the methodology, findings,
-   recommendations, and limitations.
-Author
-Gonela Rishika
+### Week 1 – Data Quality Audit & EDA
+- Loaded and inspected the dataset.
+- Checked dataset dimensions and data types.
+- Identified duplicate records and missing values.
+- Examined important order and delivery fields.
+- Documented data quality issues.
+
+### Week 2 – KPI Engineering & Delivery Analysis
+- Calculated delivered-order counts.
+- Analysed purchase-to-delivery duration.
+- Calculated late-delivery and cancellation rates.
+- Examined monthly delivery performance.
+- Compared delivery performance across sellers and categories.
+- Evaluated customer review scores.
+
+### Week 3 – Deeper Analysis & Recommendations
+- Investigated patterns in delayed deliveries.
+- Analysed purchase-to-carrier handover time.
+- Examined carrier-to-customer transit time.
+- Compared customer review scores for delayed and non-delayed orders.
+- Developed operational recommendations.
+
+### Week 4 – Dashboard & Documentation
+- Developed a Power BI dashboard.
+- Created KPI cards and visualizations.
+- Prepared the final project report.
+- Documented findings, limitations and recommendations.
+
+## Key Performance Indicators (KPIs)
+
+| Metric | Result |
+|---|---:|
+| Total Orders | 99,441 |
+| Eligible Delivered Orders | 96,470 |
+| Late Deliveries | 6,534 |
+| Late Delivery Rate | 6.77% |
+| On-Time / Early Delivery Rate | 93.23% |
+| Average Delivery Duration | 12.56 days |
+| Median Delivery Duration | 10.22 days |
+| Cancellation Rate | 0.63% |
+
+*Note: KPI values are based on the analysis summary and its respective eligibility criteria.*
+
+## Key Business Insights
+
+- Approximately 6.77% of eligible delivered orders arrived later than their estimated delivery dates.
+- The average purchase-to-customer delivery duration was 12.56 days.
+- Purchase-to-carrier handover averaged approximately 3.23 days.
+- Carrier handover-to-customer transit averaged approximately 9.33 days.
+- March 2018 recorded a higher late-delivery rate of approximately 18.96% in the monthly analysis.
+- Late deliveries were associated with lower average customer review scores (2.27 compared with 4.29 for on-time/early deliveries).
+
+These findings are descriptive and do not establish causation.
+
+## Power BI Dashboard
+
+The dashboard explores:
+
+- Total delivered orders.
+- Late delivery rate.
+- Average delivery duration.
+- Monthly late-delivery trends.
+- Late deliveries by product category.
+- Late deliveries by seller.
+
+*Dashboard measures should be interpreted alongside eligible order counts.*
+
+## Business Recommendations
+
+1. Investigate operational factors contributing to high late-delivery months.
+2. Improve order processing and carrier handover efficiency.
+3. Monitor seller and product-category delivery performance.
+4. Track customer satisfaction alongside delivery KPIs.
+5. Incorporate carrier, regional and distance information in future analysis.
+
+## Limitations
+
+- No reliable carrier identifier or direct delivery-distance measure was available.
+- Seller and category comparisons may be affected by differences in order volumes.
+- Customer review comparisons are observational.
+- KPI results depend on the selected filters and eligible records.
+
+## Repository Contents
+
+The repository contains the following project materials:
+
+- `01_data_quality_eda.ipynb` – Week 1 data quality and EDA notebook.
+- `01_data_quality_eda (1).ipynb` – Additional notebook version.
+- `week1_project_files.zip` – Supporting project files.
+- Power BI dashboard (`.pbix`).
+- Final project report (`.docx`).
+- `README.md` – Project documentation.
+
+## How to Explore
+
+1. Open the Python notebook using Google Colab.
+2. Review the data preparation and analysis workflow.
+3. Open the Power BI dashboard using Power BI Desktop.
+4. Explore the final report for detailed findings and recommendations.
+
+## Original Project Attribution
+
+This portfolio project is based on the original work by **Aravinda Surampally**.
+
+Original repository:  
+https://github.com/aravindasurampally-123/ecommerce-delivery-logistics-analysis
+
+The original analytical materials are credited to their author. Any additional analysis, documentation or modifications should be identified separately. Please check reuse permissions before redistributing original project materials.
+
+## Author
+
+**Gonela Rishika**
+
+B.Tech – Computer Science and Engineering (AI & ML)  
+Aspiring Data Analyst
+
+GitHub: https://github.com/Rishika-Gonela
