@@ -2,77 +2,94 @@
 
 **An End-to-End Data Analytics Project | Python | Power BI**
 
-[![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)](https://www.python.org/)
-[![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)](https://powerbi.microsoft.com/)
-[![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)](https://pandas.pydata.org/)
-[![Google Colab](https://img.shields.io/badge/Google%20Colab-Notebook-orange?logo=googlecolab)](https://colab.research.google.com/)
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
+![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow?logo=powerbi)
+![Google Colab](https://img.shields.io/badge/Google%20Colab-Notebook-orange?logo=googlecolab)
 
 ## Project Overview
 
-This project focuses on analysing e-commerce delivery and logistics performance using the Brazilian Olist e-commerce dataset.
+This project focuses on analysing e-commerce delivery and logistics performance using the Brazilian E-Commerce Public Dataset by Olist.
 
 The analysis explores delivery timelines, late deliveries, cancellations, product categories, seller performance and customer review scores to identify operational patterns and generate meaningful business insights.
 
-The project uses Python for data preparation and exploratory analysis and Power BI for interactive data visualization.
+Python is used for data preparation, exploratory data analysis and KPI calculations, while Power BI is used to develop interactive dashboards and visualize important business metrics.
 
 ## Project Objectives
 
 - Audit and prepare the dataset for analysis.
-- Perform exploratory data analysis (EDA).
+- Perform Exploratory Data Analysis (EDA).
+- Identify missing values, duplicates and data quality issues.
 - Calculate important delivery performance KPIs.
-- Identify patterns in delayed deliveries.
-- Analyse delivery performance across product categories and sellers.
-- Compare customer review scores for late and on-time deliveries.
-- Develop a Power BI dashboard.
-- Provide actionable business recommendations.
+- Analyse late-delivery patterns across different time periods.
+- Compare delivery performance across product categories and sellers.
+- Examine customer review scores for late and on-time deliveries.
+- Develop an interactive Power BI dashboard.
+- Generate actionable business recommendations.
 
 ## Tools & Technologies
 
-| Tool | Purpose |
+| Technology | Purpose |
 |---|---|
 | Python | Data analysis and preprocessing |
-| Pandas | Data manipulation |
+| Pandas | Data manipulation and cleaning |
 | NumPy | Numerical operations |
 | Matplotlib | Data visualization |
 | Google Colab | Notebook execution |
-| Power BI | Interactive dashboard |
+| Power BI Desktop | Interactive dashboards |
 | GitHub | Project documentation and version control |
 
 ## Dataset
 
-The project uses the publicly available Brazilian E-Commerce Public Dataset by Olist.
+The project uses the Brazilian E-Commerce Public Dataset by Olist.
 
-The dataset contains e-commerce order information, including purchase timestamps, delivery timestamps, estimated delivery dates, order status, product categories, sellers and customer reviews.
+The dataset contains information about:
+- Customer orders
+- Purchase and delivery timestamps
+- Estimated delivery dates
+- Order status
+- Product categories
+- Seller information
+- Customer reviews
 
-**Data limitation:** The available data does not provide a usable carrier identifier or direct delivery-distance measure for this analysis.
+**Data limitation:** The available dataset does not provide a usable carrier identifier or direct delivery-distance measure for this analysis.
 
 ## Project Workflow
 
-### Week 1 – Data Quality Audit & EDA
-- Loaded and inspected the dataset.
-- Checked dataset dimensions and data types.
-- Identified duplicate records and missing values.
-- Examined important order and delivery fields.
-- Documented data quality issues.
+### Week 1 – Data Quality Audit & Exploratory Data Analysis
 
-### Week 2 – KPI Engineering & Delivery Analysis
+- Loaded and inspected the dataset.
+- Examined dataset dimensions and data types.
+- Identified missing values and duplicate records.
+- Analysed important order and delivery fields.
+- Checked timestamp fields and data quality issues.
+- Documented preprocessing requirements.
+
+### Week 2 – KPI Engineering & Delivery Performance Analysis
+
 - Calculated delivered-order counts.
-- Analysed purchase-to-delivery duration.
+- Analysed purchase-to-customer delivery duration.
+- Compared actual and estimated delivery dates.
 - Calculated late-delivery and cancellation rates.
 - Examined monthly delivery performance.
-- Compared delivery performance across sellers and categories.
-- Evaluated customer review scores.
+- Compared delivery performance across sellers and product categories.
+- Analysed customer review scores.
 
-### Week 3 – Deeper Analysis & Recommendations
+### Week 3 – Deeper Analysis & Business Insights
+
 - Investigated patterns in delayed deliveries.
 - Analysed purchase-to-carrier handover time.
 - Examined carrier-to-customer transit time.
-- Compared customer review scores for delayed and non-delayed orders.
-- Developed operational recommendations.
+- Compared customer review scores for late and on-time deliveries.
+- Identified operational patterns.
+- Developed practical business recommendations.
 
-### Week 4 – Dashboard & Documentation
+### Week 4 – Power BI Dashboard & Final Documentation
+
 - Developed a Power BI dashboard.
 - Created KPI cards and visualizations.
+- Analysed monthly late-delivery trends.
+- Compared delivery performance across categories and sellers.
 - Prepared the final project report.
 - Documented findings, limitations and recommendations.
 
@@ -89,79 +106,80 @@ The dataset contains e-commerce order information, including purchase timestamps
 | Median Delivery Duration | 10.22 days |
 | Cancellation Rate | 0.63% |
 
-*Note: KPI values are based on the analysis summary and its respective eligibility criteria.*
+*Note: KPI results are based on the available analysis summary and their respective calculation criteria.*
 
 ## Key Business Insights
 
 - Approximately 6.77% of eligible delivered orders arrived later than their estimated delivery dates.
-- The average purchase-to-customer delivery duration was 12.56 days.
+- The average purchase-to-customer delivery duration was approximately 12.56 days.
+- The median delivery duration was approximately 10.22 days.
 - Purchase-to-carrier handover averaged approximately 3.23 days.
 - Carrier handover-to-customer transit averaged approximately 9.33 days.
 - March 2018 recorded a higher late-delivery rate of approximately 18.96% in the monthly analysis.
 - Late deliveries were associated with lower average customer review scores (2.27 compared with 4.29 for on-time/early deliveries).
 
-These findings are descriptive and do not establish causation.
+These findings are descriptive. The relationship between delivery delays and customer reviews does not establish causation.
 
 ## Power BI Dashboard
 
-The dashboard explores:
+The Power BI dashboard provides an overview of e-commerce delivery and logistics performance.
 
-- Total delivered orders.
-- Late delivery rate.
-- Average delivery duration.
-- Monthly late-delivery trends.
-- Late deliveries by product category.
-- Late deliveries by seller.
+### Dashboard Highlights
 
-*Dashboard measures should be interpreted alongside eligible order counts.*
+- Total Delivered Orders
+- Late Delivery Rate
+- Average Delivery Duration
+- Monthly Late-Delivery Trends
+- Late-Delivery Rate by Product Category
+- Late-Delivery Rate by Seller
+
+The dashboard helps explore delivery performance and identify areas that may require operational improvement.
 
 ## Business Recommendations
 
-1. Investigate operational factors contributing to high late-delivery months.
+1. Investigate operational conditions during months with unusually high late-delivery rates.
 2. Improve order processing and carrier handover efficiency.
-3. Monitor seller and product-category delivery performance.
-4. Track customer satisfaction alongside delivery KPIs.
-5. Incorporate carrier, regional and distance information in future analysis.
+3. Monitor seller and product-category delivery performance alongside eligible order counts.
+4. Track customer satisfaction and review scores alongside delivery KPIs.
+5. Incorporate carrier, regional and delivery-distance information in future analyses.
 
-## Limitations
+## Project Limitations
 
-- No reliable carrier identifier or direct delivery-distance measure was available.
-- Seller and category comparisons may be affected by differences in order volumes.
-- Customer review comparisons are observational.
-- KPI results depend on the selected filters and eligible records.
+- The dataset does not provide a usable carrier identifier or direct delivery-distance measure.
+- Seller and product-category comparisons may be affected by differences in order volumes.
+- Customer review comparisons are observational and do not establish causation.
+- KPI values depend on the eligible records, filters and calculation criteria used.
 
 ## Repository Contents
 
-The repository contains the following project materials:
+The repository includes the following project materials:
 
-- `01_data_quality_eda.ipynb` – Week 1 data quality and EDA notebook.
+- `01_data_quality_eda.ipynb` – Data quality audit and exploratory analysis.
 - `01_data_quality_eda (1).ipynb` – Additional notebook version.
-- `week1_project_files.zip` – Supporting project files.
 - Power BI dashboard (`.pbix`).
-- Final project report (`.docx`).
+- Project report (`.docx`).
+- `week1_project_files.zip` – Supporting project files.
 - `README.md` – Project documentation.
 
-## How to Explore
+## How to Explore the Project
 
 1. Open the Python notebook using Google Colab.
-2. Review the data preparation and analysis workflow.
-3. Open the Power BI dashboard using Power BI Desktop.
-4. Explore the final report for detailed findings and recommendations.
+2. Review the data cleaning and exploratory analysis workflow.
+3. Explore the delivery performance metrics and visualizations.
+4. Open the Power BI dashboard using Power BI Desktop.
+5. Review the project report for detailed findings and recommendations.
 
-## Original Project Attribution
-
-This portfolio project is based on the original work by **Aravinda Surampally**.
-
-Original repository:  
-https://github.com/aravindasurampally-123/ecommerce-delivery-logistics-analysis
-
-The original analytical materials are credited to their author. Any additional analysis, documentation or modifications should be identified separately. Please check reuse permissions before redistributing original project materials.
-
-## Author
+## Project Author
 
 **Gonela Rishika**
 
-B.Tech – Computer Science and Engineering (AI & ML)  
-Aspiring Data Analyst
+B.Tech – Computer Science and Engineering (AI & ML)
 
-GitHub: https://github.com/Rishika-Gonela
+**GitHub Profile:**  
+https://github.com/Rishika-Gonela
+
+**Project Repository:**  
+https://github.com/Rishika-Gonela/ecommerce-delivery-logistics-analysis
+
+**Technologies:** Python | Pandas | NumPy | Matplotlib | Power BI
+
